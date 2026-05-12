@@ -6,44 +6,80 @@ import pulseImg from "@/assets/project-pulse.jpg";
 
 const projects = [
   {
-    title: "CloudNexus",
+    title: "CBE Wholesale Loan Management System",
+    year: "2026",
+    image: cloudImg,
+    category: "Enterprise",
+    href: "https://cbewholesale.cbe.com.et/",
+    description:
+      "Enterprise-grade wholesale loan management platform developed for the Commercial Bank of Ethiopia. Built to streamline loan processing, approval workflows, customer management, and operational reporting for large-scale banking operations.",
+    tags: ["React", "ASP.NET", "PostgreSQL", "Enterprise Systems"],
+  },
+
+  {
+    title: "Loan Origination Management System",
+    year: "2025",
+    image: vortexImg,
+    category: "Enterprise",
+    href: "#",
+    description:
+      "Internal banking platform for managing loan origination workflows, document verification, approval pipelines, and customer onboarding with role-based access control.",
+    tags: ["Next.js", "Node.js", "REST API", "Authentication"],
+  },
+
+  {
+    title: "Collateral Management & Evaluation System",
+    year: "2025",
+    image: prismImg,
+    category: "Enterprise",
+    href: "#",
+    description:
+      "Collateral evaluation system for mechanical asset assessment in banking operations, improving valuation accuracy and workflow efficiency.",
+    tags: ["React", "TypeScript", "Tailwind", "PostgreSQL"],
+  },
+
+  {
+    title: "AI-Powered Quiz Generator",
+    year: "2024",
+    image: pulseImg,
+    category: "AI",
+    href: "https://your-demo-link.com",
+    description:
+      "AI-driven quiz generator using OpenAI APIs with adaptive difficulty, PDF export, and instant feedback.",
+    tags: ["MERN", "OpenAI API", "TypeScript", "Vercel"],
+  },
+
+  {
+    title: "CBE 2FA Mobile Authenticator",
+    year: "2026",
+    image: pulseImg,
+    category: "Mobile",
+    href: "#",
+    description:
+      "Secure mobile 2FA system with QR-based TOTP, biometric authentication, and encrypted storage for enterprise banking security.",
+    tags: ["React Native", "Expo", "TypeScript", "TOTP"],
+  },
+
+  {
+    title: "Student Management System",
     year: "2024",
     image: cloudImg,
     category: "Backend",
+    href: "#",
     description:
-      "A real-time distributed infrastructure monitoring tool built with Go, Rust, and React. Handles 1M+ events per second with sub-100ms latency.",
-    tags: ["Go", "Rust", "WebAssembly", "React"],
-  },
-  {
-    title: "Vortex Engine",
-    year: "2023",
-    image: vortexImg,
-    category: "WebGL",
-    description:
-      "Custom WebGL rendering engine built on Three.js and GLSL shaders. Optimized for low-latency particle systems and spatial UI.",
-    tags: ["Three.js", "GLSL", "TypeScript"],
-  },
-  {
-    title: "Prism Logic",
-    year: "2024",
-    image: prismImg,
-    category: "Frontend",
-    description:
-      "Holographic infrastructure suite with predictive node scaling, visual CLI, and a fully spatial command interface.",
-    tags: ["Next.js", "tRPC", "GSAP", "Tailwind"],
-  },
-  {
-    title: "Pulse Mobile",
-    year: "2023",
-    image: pulseImg,
-    category: "Mobile",
-    description:
-      "Cross-platform mobile companion for engineering teams — incident response, on-call, and metrics in your pocket.",
-    tags: ["React Native", "Expo", "Supabase"],
+      "Academic management system with multi-role dashboards, JWT authentication, and performance tracking.",
+    tags: ["React.js", "NestJS", "PostgreSQL", "JWT"],
   },
 ];
 
-const filters = ["All", "Frontend", "Backend", "WebGL", "Mobile"] as const;
+const filters = [
+  "All",
+  "Frontend",
+  "Backend",
+  "Enterprise",
+  "Mobile",
+  "AI",
+] as const;
 type Filter = (typeof filters)[number];
 
 export function Projects() {
@@ -55,7 +91,7 @@ export function Projects() {
       <div className="max-w-7xl mx-auto space-y-12">
         <div className="flex justify-between items-end border-b border-border pb-8">
           <h2 className="font-display text-4xl md:text-5xl font-bold tracking-tighter">
-            SELECTED <br className="md:hidden" /> ARTIFACTS
+            SELECTED <br className="md:hidden" /> PROJECTS
           </h2>
           <span className="text-muted-foreground font-display italic text-sm">01 // PROJECTS</span>
         </div>
@@ -95,8 +131,16 @@ export function Projects() {
               </div>
               <div className="space-y-4">
                 <div className="flex justify-between items-start gap-4">
-                  <h3 className="font-display text-2xl md:text-3xl font-bold tracking-tight">{p.title}</h3>
-                  <span className="text-accent font-mono text-xs mt-2">{p.year}</span>
+<a
+  href={p.href}
+  target="_blank"
+  rel="noreferrer"
+  className="font-display text-2xl md:text-3xl font-bold tracking-tight hover:text-accent transition-colors inline-block"
+  style={{ animationDelay: `${i * 80}ms` }}
+
+>
+  {p.title}
+</a>                  <span className="text-accent font-mono text-xs mt-2">{p.year}</span>
                 </div>
                 <p className="text-muted-foreground leading-relaxed">{p.description}</p>
                 <div className="flex flex-wrap gap-2 pt-2">
@@ -111,8 +155,8 @@ export function Projects() {
                 </div>
               </div>
               <div className="mt-6 pt-4 border-t border-border flex justify-between items-center text-[10px] font-mono uppercase tracking-widest text-muted-foreground">
-                <span>CASE_STUDY_0{i + 1}</span>
-                <span className="text-accent group-hover:translate-x-1 transition-transform">→ READ</span>
+                <span>VIEW_PROJECT{i + 1}</span>
+                <span className="text-accent group-hover:translate-x-1 transition-transform">→ VIEW PROJECT</span>
               </div>
             </article>
           ))}

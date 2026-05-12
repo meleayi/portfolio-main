@@ -17,7 +17,7 @@ export function Nav() {
     <nav className="fixed top-0 inset-x-0 z-50 border-b border-border bg-background/70 backdrop-blur-xl">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-3">
         <a href="#" className="font-display font-bold text-lg tracking-tighter shrink-0">
-          ALEX<span className="text-accent">.</span>DEV
+          Melese<span className="text-accent">.</span>Ayichlie
         </a>
 
         <div className="hidden lg:flex gap-7 text-xs font-medium tracking-[0.18em] uppercase text-muted-foreground">

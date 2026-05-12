@@ -11,18 +11,27 @@ export function Hero() {
         <div className="flex-1 space-y-8 animate-fade-up">
           <div className="inline-flex items-center gap-2 px-3 py-1 border border-accent/30 rounded-full text-[10px] font-bold tracking-[0.22em] text-accent uppercase bg-accent/5">
             <span className="size-1.5 rounded-full bg-accent animate-blink" />
-            Full Stack Architect
+            Full Stack Developer
           </div>
-          <h1 className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold leading-[0.9] tracking-tighter glow-text">
-            BUILDING <br />
-            DIGITAL <br />
-            <span className="text-gradient italic">DIMENSIONS</span>
+          <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[0.9] tracking-tighter glow-text">
+            FULL-STACK <br />
+            SECURE <br />
+            <span className="text-gradient italic">MODERN &nbsp;</span>
           </h1>
           <div className="font-mono text-sm md:text-base text-accent">
-            &gt; <TypingText words={["building distributed systems", "shipping immersive UIs", "writing rust & typescript", "designing spatial interfaces"]} />
+            &gt; <TypingText
+              words={[
+                "building scalable banking systems",
+                "developing modern web applications",
+                "creating secure backend APIs",
+                "crafting fast React interfaces",
+              ]}
+            />
           </div>
           <p className="text-lg md:text-xl text-muted-foreground max-w-xl leading-relaxed">
-            I'm Alex Mercer — engineering high-performance distributed systems and immersive web experiences that push the boundaries of what's possible in the browser.
+            I'm Melese, a Full-Stack Software Engineer at the Commercial Bank of
+            Ethiopia, focused on building secure, scalable, and modern digital
+            applications using React, Next.js, ASP.NET, Django, and Node.js.
           </p>
           <div className="flex flex-wrap gap-4 pt-2">
             <a
@@ -45,14 +54,14 @@ export function Hero() {
           <div className="relative rounded-2xl border border-border bg-surface overflow-hidden card-3d">
             <img
               src={heroImg}
-              alt="3D visualization of interconnected glowing data nodes"
+              alt="hero image"
               width={1024}
-              height={1024}
+              height={124}
               className="w-full h-full object-cover animate-float"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent pointer-events-none" />
             <div className="absolute bottom-4 left-4 right-4 flex justify-between text-[10px] font-mono text-muted-foreground tracking-widest uppercase">
-              <span>NODE.RENDER</span>
+              <span>Full Stack Software Developer</span>
               <span className="text-accent">ACTIVE</span>
             </div>
           </div>
