@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" className="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Melese Ayichlie — Full-Stack Software Engineer</title>
+    <meta name="description" content="Portfolio of Melese Ayichlie, a full-stack software engineer at Commercial Bank of Ethiopia building secure, scalable enterprise systems." />
+    <meta name="author" content="Melese Ayichlie" />
+    <meta property="og:title" content="Melese Ayichlie — Full-Stack Engineer" />
+    <meta property="og:description" content="Enterprise banking systems, loan management platforms, and scalable full-stack applications." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    
+    <script>
+      (function() {
+        try {
+          var t = localStorage.getItem('theme') || 'dark';
+          if (t === 'dark' || (!t && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+          } else {
+            document.documentElement.classList.remove('dark');
+          }
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
