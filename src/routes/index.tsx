@@ -19,17 +19,22 @@ export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-      { title: "Alex Mercer — Full Stack Architect & Software Engineer" },
+      {
+        title: "Melese Ayichlie — Full-Stack Software Engineer",
+      },
       {
         name: "description",
         content:
-          "Portfolio of Alex Mercer, a full stack architect building high-performance distributed systems and immersive web experiences.",
+          "Portfolio of Melese Ayichlie, a full-stack software engineer at Commercial Bank of Ethiopia building secure, scalable enterprise systems.",
       },
-      { property: "og:title", content: "Alex Mercer — Full Stack Architect" },
+      {
+        property: "og:title",
+        content: "Melese Ayichlie — Full-Stack Engineer",
+      },
       {
         property: "og:description",
         content:
-          "Selected works in distributed systems, WebGL engines, and spatial interfaces.",
+          "Enterprise banking systems, loan management platforms, and scalable full-stack applications.",
       },
     ],
   }),

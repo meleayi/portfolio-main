@@ -1,21 +1,72 @@
-const items = [
-  "TYPESCRIPT", "REACT", "NEXT.JS", "RUST", "GO",
-  "POSTGRES", "DOCKER", "AWS", "WEBGL", "TAILWIND",
+const stacks = [
+  {
+    title: "Frontend",
+    items: ["REACT", "NEXT.JS", "TYPESCRIPT", "TAILWIND CSS", "MATERIAL UI", "ANT DESIGN", "SHADCN/UI"],
+  },
+  {
+    title: "Backend",
+    items: ["ASP.NET CORE", "NEST.JS", "DJANGO", "NODE.JS", "EXPRESS", "ENTITY FRAMEWORK"],
+  },
+  {
+    title: "Databases",
+    items: ["POSTGRESQL", "SQL SERVER", "MONGODB"],
+  },
+  {
+    title: "Security & APIs",
+    items: ["JWT", "OAUTH", "LDAP", "REST APIs", "WSO2"],
+  },
+  {
+    title: "DevOps & Deployment",
+    items: ["DOCKER", "CI/CD", "VERCEL", "NETLIFY", "IIS", "GIT", "GITHUB", "GITLAB"],
+  },
+  {
+    title: "ORM & Data Layer",
+    items: ["PRISMA", "TYPEORM", "DRIZZLE ORM",  "ENTITY FRAMEWORK"],
+  },
 ];
-
 export function Stack() {
-  const loop = [...items, ...items];
   return (
-    <section id="stack" className="py-20 border-y border-border bg-surface/30 overflow-hidden">
-      <div className="flex whitespace-nowrap gap-16 animate-marquee">
-        {loop.map((t, i) => (
-          <div key={i} className="flex items-center gap-16 shrink-0">
-            <span className="font-display text-4xl md:text-6xl font-bold tracking-tighter text-foreground/60">
-              {t}
-            </span>
-            <span className="text-accent text-4xl md:text-6xl">●</span>
-          </div>
-        ))}
+    <section
+      id="stack"
+      className="py-24 border-y border-border bg-surface/30"
+    >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 space-y-16">
+        
+        {/* Title */}
+        <div className="space-y-2">
+          <h2 className="font-display text-4xl md:text-5xl font-bold tracking-tighter">
+            TECHNOLOGY STACK
+          </h2>
+          <p className="text-muted-foreground max-w-2xl">
+            A structured overview of the technologies I use to build scalable
+            enterprise and banking systems at Commercial Bank of Ethiopia.
+          </p>
+        </div>
+
+        {/* Groups */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+          {stacks.map((group) => (
+            <div
+              key={group.title}
+              className="space-y-4 p-6 rounded-xl border border-border bg-surface hover:bg-surface-2 transition"
+            >
+              <h3 className="font-display text-xl font-bold text-accent">
+                {group.title}
+              </h3>
+
+              <div className="flex flex-wrap gap-2">
+                {group.items.map((item) => (
+                  <span
+                    key={item}
+                    className="text-[10px] px-2 py-1 bg-surface-2 border border-border rounded font-mono tracking-wider text-muted-foreground"
+                  >
+                    {item}
+                  </span>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

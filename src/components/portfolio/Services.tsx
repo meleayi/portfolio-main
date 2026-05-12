@@ -1,27 +1,27 @@
 const services = [
   {
     n: "01",
-    title: "Distributed Systems",
-    desc: "Designing fault-tolerant backend architectures, event-driven pipelines, and APIs built to scale to millions of requests.",
-    bullets: ["Microservices", "Event sourcing", "Observability"],
+    title: "Enterprise Backend Systems",
+    desc: "Designing secure, scalable backend systems for banking and enterprise platforms at Commercial Bank of Ethiopia. Focused on reliability, performance, and transactional integrity.",
+    bullets: ["Microservices", "Clean Architecture", "High Availability"],
   },
   {
     n: "02",
     title: "Frontend Engineering",
-    desc: "Production-grade web apps with React, Next.js, and TypeScript — fast, accessible, and pixel-faithful to design.",
-    bullets: ["React / Next.js", "Design systems", "Performance"],
+    desc: "Building modern, responsive web applications using React and Next.js with strong focus on usability, accessibility, and performance optimization.",
+    bullets: ["React / Next.js", "Design Systems", "Performance Tuning"],
   },
   {
     n: "03",
-    title: "Spatial & WebGL",
-    desc: "Custom rendering, shaders, and immersive interfaces that turn data into something you can feel.",
-    bullets: ["Three.js", "GLSL", "Motion design"],
+    title: "Financial & Business Systems",
+    desc: "Developing internal banking solutions such as loan origination, collateral management, and approval workflows used in real enterprise operations.",
+    bullets: ["Workflow Systems", "Role-Based Access", "Secure APIs"],
   },
   {
     n: "04",
-    title: "Cloud & DevOps",
-    desc: "Pragmatic CI/CD, infrastructure as code, and observability that make teams ship faster with fewer pages.",
-    bullets: ["AWS / GCP", "Terraform", "GitHub Actions"],
+    title: "Cloud, DevOps & Deployment",
+    desc: "Implementing CI/CD pipelines and deployment strategies to ensure fast, reliable delivery across production and enterprise environments.",
+    bullets: ["Docker", "CI/CD Pipelines", "Vercel / IIS"],
   },
 ];
 
@@ -33,14 +33,14 @@ export function Services() {
           <h2 className="font-display text-4xl md:text-5xl font-bold tracking-tighter">
             EXPERTISE
           </h2>
-          <span className="text-muted-foreground font-display italic text-sm">03 // SERVICES</span>
+          <span className="text-muted-foreground font-display italic text-sm"></span>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-border border border-border rounded-2xl overflow-hidden">
           {services.map((s) => (
             <div
               key={s.n}
-              className="group bg-surface p-8 md:p-10 hover:bg-surface-2 transition-colors relative"
+              className="group bg-surface p-8 md:p-10 hover:bg-surface-2 transition-colors relative space-y-4"
             >
               <div className="flex items-start justify-between mb-6">
                 <span className="font-mono text-xs text-accent tracking-widest">{s.n}</span>
@@ -54,7 +54,7 @@ export function Services() {
                 {s.bullets.map((b) => (
                   <li
                     key={b}
-                    className="text-[10px] font-mono uppercase tracking-widest text-muted-foreground border border-border px-2 py-1 rounded"
+                    className="text-[11px] font-mono tracking-wider text-muted-foreground bg-surface-2 px-2 py-1 rounded"
                   >
                     {b}
                   </li>

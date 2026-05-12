@@ -76,7 +76,7 @@ export function CommandPalette() {
             <CommandItem onSelect={() => { window.open("https://linkedin.com", "_blank"); setOpen(false); }}>
               <span className="font-mono text-accent mr-2">⌥</span> Open LinkedIn
             </CommandItem>
-            <CommandItem onSelect={() => { window.location.href = "mailto:hello@alex.dev"; setOpen(false); }}>
+            <CommandItem onSelect={() => { window.location.href = "mailto:meleayi2021@gmmail.com"; setOpen(false); }}>
               <span className="font-mono text-accent mr-2">@</span> Email me
             </CommandItem>
           </CommandGroup>
