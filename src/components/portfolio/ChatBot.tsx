@@ -2,12 +2,12 @@ import * as React from "react";
 
 // ─── API KEYS ────────────────────────────────────────────────────────────────
 const GEMINI_KEYS = [
-  process.env.NEXT_PUBLIC_GEMINI_KEY_1!,
-  process.env.NEXT_PUBLIC_GEMINI_KEY_2!,
+  import.meta.env.VITE_GEMINI_KEY_1,
+  import.meta.env.VITE_GEMINI_KEY_2,
 ].filter(Boolean);
 
 const GROQ_KEYS = [
-  process.env.NEXT_PUBLIC_GROQ_KEY!,
+  import.meta.env.VITE_GROQ_KEY,
 ].filter(Boolean);
 
 // ─── MODELS ──────────────────────────────────────────────────────────────────
@@ -152,6 +152,7 @@ async function tryGroq(messages: Msg[]): Promise<string | null> {
 
 // ─── MAIN AI CALLER — Gemini first, Groq as fallback ─────────────────────────
 async function callAI(messages: Msg[]): Promise<string> {
+
   const geminiResult = await tryGemini(messages);
   if (geminiResult) return geminiResult;
 
