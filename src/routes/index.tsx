@@ -14,6 +14,8 @@ import { Contact } from "@/components/portfolio/Contact";
 import { Terminal } from "@/components/portfolio/Terminal";
 import { ParticleBackground } from "@/components/portfolio/ParticleBackground";
 import { CursorGlow } from "@/components/portfolio/CursorGlow";
+import { ChatBot } from "@/components/portfolio/ChatBot";
+import { ThemeCustomizer } from "@/components/portfolio/ThemeCustomizer";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -46,6 +48,8 @@ function Index() {
       <div className="relative min-h-screen bg-background text-foreground">
         <ParticleBackground />
         <CursorGlow />
+         <ThemeCustomizer />
+         <ChatBot />
         <Nav />
         <main>
           <Hero />
